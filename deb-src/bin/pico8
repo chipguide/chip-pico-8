@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ ! -d ~/.lexaloffle/ ]; then
+  cp -R /etc/skel/.lexaloffle $HOME/
+fi
+
+if [ $(which onboard) ]; then
+  onboard $HOME/.config/pico8-onboard /usr/share/pico8-onboard/ &
+elif [ -f $HOME/.lexaloffle/pico-8/desktop_config.txt ]; then
+  mv $HOME/.lexaloffle/pico-8/desktop_config.txt $HOME/.lexaloffle/pico-8/config.txt
+fi
+
+
+exec /usr/lib/pico-8/pico8 -splore
+

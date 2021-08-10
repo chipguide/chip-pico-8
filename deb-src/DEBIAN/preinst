@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    install|upgrade)
+    if [ ! -f /boot/sun5i-r8-chip.dtb ]; then
+        echo -e "Device is not a CHIP!\n"
+        exit 1
+    fi
+    ;;
+    *)
+        echo "preinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+exit 0
+

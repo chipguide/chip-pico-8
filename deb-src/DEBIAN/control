@@ -1,0 +1,12 @@
+Package: chip-pico-8
+Version: 0.2.2c.chip
+Architecture: armhf
+Maintainer: Max Glenister <moglenstar@gmail.com>
+Installed-Size: 18000
+Depends: libc6 (>= 2.7), libcurl3 (>= 7.16.2), libsdl2-2.0-0 (>= 2.0.0)
+Section: embedded
+Priority: optional
+Homepage: lexaloffle.com/pico-8.php
+Description: PICO-8 fantasy console
+ PICO-8 is a fantasy console for making, sharing and playing tiny games and other computer programs. When you turn it on, the machine greets you with a shell for typing in Lua commands and provides simple built-in tools for creating your own cartridges.
+
