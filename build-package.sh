@@ -27,15 +27,14 @@ case "$1" in
 
         # fix permissions
         sudo chown -R 0:0 "${DIST_PATH}"
-        sudo chmod 0775 "${DIST_PATH}/DEBIAN/preinst"
-        sudo chmod 0775 "${DIST_PATH}/DEBIAN/postinst"
+        sudo chmod -R 0775 "${DIST_PATH}"
         sudo chmod +x "${DIST_PATH}/bin/pico8"
 
         # build the deb
         dpkg -b "${DIST_PATH}"
     ;;
     *)
-        echo "Usage: ./build-package.sh build 0.2.2c" >&2
+        echo "Usage: ./build-package.sh build 0.2.3" >&2
         exit 1
     ;;
 esac
